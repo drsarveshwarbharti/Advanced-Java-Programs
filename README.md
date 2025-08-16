@@ -5,27 +5,18 @@ This repository contains a collection of Advanced Java programs designed to help
 
 📂 Contents
 Java AWT & Swing
-
 GUI applications like Calculator, Quiz App, Tic-Tac-Toe
 
 Networking in Java
-
 Socket programming, Client-Server communication
 
 Database Connectivity (JDBC)
-
 CRUD operations with MySQL / Oracle DB
 
-Java AWT & Swing
-
-GUI applications like Calculator, Quiz App, Tic-Tac-Toe
-
 Advanced Topics
-
 Lambda Expressions, Streams API
 
 Reflection API
-
 Java 8+ Features
 
 🛠️ Requirements
