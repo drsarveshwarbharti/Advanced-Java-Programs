@@ -25,6 +25,7 @@ Reflection API
 
 Java 8+ Features
 
+
 🛠️ Requirements
 
 Java JDK 8+ installed
@@ -49,6 +50,7 @@ Run the program:
 
 java ProgramName
 
+
 🎯 Learning Outcomes
 
 By exploring these programs, you will:
@@ -58,6 +60,7 @@ Gain hands-on experience with advanced Java concepts.
 Understand real-world applications of Java in software development.
 
 Build a strong foundation for interviews, projects, and competitive coding.
+
 
 🤝 Contributing
 
@@ -69,9 +72,13 @@ Add your Java program / improve existing code
 
 Submit a Pull Request
 
+
 📜 License
+
 This repository is licensed under the MIT License – feel free to use and modify the code.
 
+
 🌟 Acknowledgments
+
 Special thanks to the open-source Java community and all contributors who share knowledge to help developers grow 🚀
 
