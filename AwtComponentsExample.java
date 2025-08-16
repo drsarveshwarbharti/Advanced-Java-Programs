@@ -1,3 +1,6 @@
+//Java AWT program that creates a window with all the basic components (Label, TextField, Button, Checkbox, TextArea, Choice, List, etc.).
+//By Extending Frame Class
+
 import java.awt.*;
 import java.awt.event.*;
 
