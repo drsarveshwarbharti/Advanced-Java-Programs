@@ -4,7 +4,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class AWTComponentsExample extends Frame {
+public class AwtComponentsExample extends Frame {
     
     AWTComponentsExample() {
         // Set Frame properties
