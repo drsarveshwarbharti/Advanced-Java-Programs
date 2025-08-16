@@ -38,7 +38,7 @@ For JDBC programs → Database setup (MySQL/Oracle/PostgreSQL)
 
 Clone the repository:
 
-git clone https://github.com/your-username/advanced-java-programs.git
+git clone https://github.com/drsarveshwarbharti/advanced-java-programs.git
 
 Open the project in your IDE or terminal.
 
