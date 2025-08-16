@@ -3,7 +3,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class AWTAllComponents {
+public class AwtAllComponents {
     public static void main(String[] args) {
         // Create Frame object
         Frame frame = new Frame("AWT Components Example");
