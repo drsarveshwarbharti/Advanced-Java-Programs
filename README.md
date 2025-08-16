@@ -34,18 +34,23 @@ Any IDE (Eclipse / IntelliJ / NetBeans) or simple text editor
 For JDBC programs → Database setup (MySQL/Oracle/PostgreSQL)
 
 ▶️ How to Run
+
 Clone the repository:
+
 git clone https://github.com/your-username/advanced-java-programs.git
 
 Open the project in your IDE or terminal.
 
 Compile the program:
+
 javac ProgramName.java
 
 Run the program:
+
 java ProgramName
 
 🎯 Learning Outcomes
+
 By exploring these programs, you will:
 
 Gain hands-on experience with advanced Java concepts.
@@ -55,6 +60,7 @@ Understand real-world applications of Java in software development.
 Build a strong foundation for interviews, projects, and competitive coding.
 
 🤝 Contributing
+
 Contributions are welcome! 🎉
 
 Fork this repository
