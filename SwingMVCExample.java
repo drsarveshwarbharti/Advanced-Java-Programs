@@ -17,8 +17,8 @@ class LoginModel {
 }
 
 // ===== View =====
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.*; //Add this statement at the top of this program
+import java.awt.*; //Add this statement at the top of this program
 
 class LoginView extends JFrame {
     JTextField userField;
@@ -30,7 +30,7 @@ class LoginView extends JFrame {
         setTitle("MVC Login Example");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(4, 1));
+        setLayout(new GridLayout(6, 1));
 
         // Username
         userField = new JTextField();
@@ -67,7 +67,7 @@ class LoginView extends JFrame {
 }
 
 // ===== Controller =====
-import java.awt.event.*;
+import java.awt.event.*; //Add this statement at the top of this program
 
 class LoginController {
     private LoginModel model;
