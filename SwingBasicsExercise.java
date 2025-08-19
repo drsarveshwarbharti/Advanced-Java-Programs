@@ -1,4 +1,4 @@
-/* Write a Java Swing program with a label, text field, button, checkboxes, radio buttons, combo box, and a text area. 
+/* Java Swing program with a label, text field, button, checkboxes, radio buttons, combo box, and a text area. 
 On clicking the button, display the entered name, selected gender, chosen hobbies, and city in a label at the bottom. */
 //This program demonstrates JLabel, JTextField, JButton, JCheckBox, JRadioButton, JComboBox, JTextArea, and event handling
 
