@@ -1,7 +1,7 @@
 //Swing Toolbar with Buttons
 
 import javax.swing.*;
-import java.awt.event.*;
+//import java.awt.event.*;
 
 public class ToolBarExample {
     public static void main(String[] args) {
