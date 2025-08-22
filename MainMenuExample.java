@@ -1,7 +1,7 @@
 //Swing - Main Menu (JMenuBar, JMenu, JMenuItem)
 
 import javax.swing.*;
-import java.awt.event.*;
+//import java.awt.event.*;
 
 public class MainMenuExample {
     public static void main(String[] args) {
