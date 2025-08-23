@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class PopupMenuExample {
+public class PopupMenuExample1 {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Popup Menu Example");
         JTextArea textArea = new JTextArea("Right-click inside this area to see popup menu");
