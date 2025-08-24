@@ -44,7 +44,12 @@ public class PopupMenuWithSubmenu {
         colorsMenu.add(blueItem);
 
         // Action listeners for submenu
-        redItem.addActionListener(e -> button.setBackground(java.awt.Color.RED));
+        //redItem.addActionListener(e -> button.setBackground(java.awt.Color.RED));
+        redItem.addActionListener(e -> {
+            button.setBackground(java.awt.Color.RED);
+            button.setOpaque(true);        // Make sure background is painted
+            button.setBorderPainted(false); // Optional: remove border for full color effect
+        });
         blueItem.addActionListener(e -> button.setBackground(java.awt.Color.BLUE));
 
         buttonMenu.add(colorsMenu);
