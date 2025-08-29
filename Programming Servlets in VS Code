@@ -1,0 +1,76 @@
+Programming Servlets in VS Code 
+(It involves setting up your environment for Java web development and using Maven for project management and dependency handling)
+
+1. Set up your Development Environment:
+  •	Install Java Development Kit (JDK):
+      Ensure you have a compatible JDK installed (e.g., JDK 8 or higher).
+  •	Install Apache Maven:
+      Download and install Maven, which will be used to manage project dependencies and build your WAR file.
+  •	Install Apache Tomcat (or Jetty):
+      Download and install a web server like Tomcat or Jetty, where your Servlet application will be deployed.
+  •	Install VS Code Extensions:
+      •	Extension Pack for Java: This pack includes essential extensions for Java development in VS Code, such as Language Support for Java™ by Red Hat and Debugger for Java.
+      •	Maven for Java: This extension provides Maven integration within VS Code.
+      •	Tomcat for Java (or Jetty for Java): Install the appropriate extension for your chosen web server to facilitate deployment and management.
+
+2. Create a Maven Web Project:
+    •	Open the Command Palette (Ctrl+Shift+P) in VS Code.
+    •	Search for and select "Maven: Create Maven Project."
+    •	Choose maven-archetype-webapp as the archetype.
+    •	Provide a groupId (e.g., com.example) and artifactId (e.g., mywebapp) for your project.
+    •	Select a location to save your project.
+
+3. Add Servlet Dependencies:
+    •	Open the pom.xml file in your project's root directory.
+    •	Add the necessary Servlet API dependency within the <dependencies> section. For example:
+    Code
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version> <!-- Or a compatible version -->
+        <scope>provided</scope>
+    </dependency>
+
+4. Create your Servlet Class:
+    •	In your project, navigate to src/main/java and create a new package (e.g., com.example.servlets).
+    •	Create a new Java class within this package (e.g., MyServlet.java).
+    •	Extend HttpServlet and override the doGet or doPost methods to handle HTTP requests.
+    Code:
+    import javax.servlet.ServletException;
+    import javax.servlet.http.HttpServlet;
+    import javax.servlet.http.HttpServletRequest;
+    import javax.servlet.http.HttpServletResponse;
+    import java.io.IOException;
+    import java.io.PrintWriter;
+
+    public class MyServlet extends HttpServlet {
+        protected void doGet(HttpServletRequest request, HttpServletResponse response)
+                throws ServletException, IOException {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            out.println("<h1>Hello from MyServlet!</h1>");
+        }
+    }
+
+5. Configure web.xml (Deployment Descriptor):
+    •	Open the web.xml file located in src/main/webapp/WEB-INF.
+    •	Define your Servlet and map it to a URL pattern.
+    Code:
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.example.servlets.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/myservlet</url-pattern>
+    </servlet-mapping>
+
+6. Build and Deploy:
+    •	Build the WAR file:
+        Use the Maven extension in VS Code or the terminal to run mvn clean package. This will create a .war file in your target directory.
+    •	Deploy to Tomcat:
+        Use the Tomcat for Java extension to deploy the generated .war file to your configured Tomcat server, or manually copy the .war file to Tomcat's webapps directory.
+
+7. Run and Test:
+    •	Start your Tomcat server.
+    •	Access your Servlet in a web browser using the mapped URL (e.g., http://localhost:8080/mywebapp/myservlet).
