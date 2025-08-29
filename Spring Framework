@@ -1,4 +1,5 @@
-The Spring Framework is an open-source framework for building enterprise-level Java applications. It provides a comprehensive infrastructure for developing robust, scalable, and maintainable applications, simplifying many of the complexities of modern Java development.
+The Spring Framework is an open-source framework for building enterprise-level Java applications. 
+It provides a comprehensive infrastructure for developing robust, scalable, and maintainable applications, simplifying many of the complexities of modern Java development.
 
 
 Key Principles
@@ -26,12 +27,7 @@ Spring Security: A powerful framework for handling authentication and authorizat
 In essence, Spring's goal is to make Java development faster, more efficient, and more enjoyable by providing a flexible and well-structured foundation.
 
 
-
-
-
-
-
-example program
+Example Pprogram:
 
 Here is a simple "Hello, World!" example program for Spring, demonstrating the core concepts of Dependency Injection (DI) and the use of the Spring IoC (Inversion of Control) Container.
 
