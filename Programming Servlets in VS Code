@@ -1,6 +1,8 @@
 Programming Servlets in VS Code 
 (It involves setting up your environment for Java web development and using Maven for project management and dependency handling)
 
+Step-by-step instruction are as under:
+
 1. Set up your Development Environment:
   •	Install Java Development Kit (JDK):
       Ensure you have a compatible JDK installed (e.g., JDK 8 or higher).
