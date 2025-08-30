@@ -1,0 +1,156 @@
+Servlet Working in Java
+
+A Servlet is a Java program that runs on a server and handles requests/responses in a web application. 
+It follows the Servlet Lifecycle defined by the javax.servlet API.
+
+1. How Servlet Works (Step-by-Step)
+
+    1. Client Sends Request
+
+    A web browser (or client) sends an HTTP request (like GET or POST) to the web server (e.g., Tomcat).
+
+    Example:
+
+        http://localhost:8080/mywebapp/login
+
+
+    2. Web Server Receives Request
+
+      The web server (Tomcat/Jetty/etc.) checks the web.xml (deployment descriptor) or Servlet annotations (@WebServlet) to decide which Servlet should handle the request.
+
+    3. Servlet Container Invokes Servlet
+
+      The Servlet Container (part of Tomcat) loads the Servlet class if not already loaded.
+
+      It creates an instance of the Servlet and calls its lifecycle methods.
+
+2. Servlet Lifecycle Methods
+
+The Servlet lifecycle is managed by the Servlet Container. It consists of 3 main phases:
+
+(a) init()
+
+Called once when the servlet is first loaded.
+
+Used for initialization tasks (e.g., database connection).
+
+public void init() throws ServletException {
+    System.out.println("Servlet initialized");
+}
+
+(b) service()
+
+Called for every request.
+
+Determines whether the request is GET, POST, etc.
+
+Dispatches request to appropriate methods like doGet() or doPost().
+
+protected void service(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    super.service(request, response);  // delegates to doGet/doPost
+}
+
+(c) doGet() and doPost()
+
+doGet() → Handles HTTP GET requests (e.g., form submission via URL).
+
+doPost() → Handles HTTP POST requests (e.g., form submission with hidden data).
+
+Example:
+
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+        throws ServletException, IOException {
+    resp.getWriter().println("This is a GET request");
+}
+
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+        throws ServletException, IOException {
+    String name = req.getParameter("username");
+    resp.getWriter().println("Hello " + name);
+}
+
+(d) destroy()
+
+Called once before the servlet is unloaded (server shutdown or app undeployed).
+
+Used for cleanup (e.g., closing DB connections).
+
+public void destroy() {
+    System.out.println("Servlet destroyed");
+}
+
+
+3. Servlet Request and Response Flow
+
+Request Object (HttpServletRequest)
+
+Contains request data (parameters, headers, cookies).
+
+Example:
+
+String user = request.getParameter("username");
+
+
+Response Object (HttpServletResponse)
+
+Used to send response back to the client.
+
+Example:
+
+response.setContentType("text/html");
+response.getWriter().println("<h1>Hello User</h1>");
+
+
+4. Role of web.xml or Annotations
+
+Servlet can be mapped using web.xml:
+
+<servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.example.LoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+
+Or using annotation (simpler):
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet { ... }
+
+5. Complete Lifecycle Diagram (Conceptual)
+          ┌─────────────────┐
+          │   Client (Browser) │
+          └─────────┬─────────┘
+                    │  HTTP Request
+                    ▼
+          ┌─────────────────────┐
+          │  Web Server (Tomcat)│
+          └─────────┬──────────┘
+                    │  Maps URL
+                    ▼
+          ┌─────────────────────┐
+          │ Servlet Container   │
+          ├─────────────────────┤
+          │ 1. init()           │
+          │ 2. service()        │
+          │ 3. doGet()/doPost() │
+          │ 4. destroy()        │
+          └─────────────────────┘
+                    │  HTTP Response
+                    ▼
+          ┌─────────────────┐
+          │   Client Browser │
+          └─────────────────┘
+
+
+✅ In short:
+
+Servlets act as a bridge between client requests and server responses.
+
+Servlet Container manages lifecycle, mapping, and threading.
+
+Developers only write doGet/doPost, the container handles the rest.
