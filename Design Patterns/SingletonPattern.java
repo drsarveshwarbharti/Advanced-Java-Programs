@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-// ========== 1. SINGLETON PATTERN ==========
+// ========== SINGLETON PATTERN ==========
 /*
 Singleton Pattern
 Ensures only one instance of a class exists.
@@ -20,6 +20,7 @@ class Singleton {
     }
 }
 
+//Driver Class
 public class SingletonPattern {
     public static void main(String[] args) {
         
