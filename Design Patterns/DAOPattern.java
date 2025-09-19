@@ -28,7 +28,7 @@ class StudentDAOImpl implements StudentDAO {
 }
 
 //DriverClass
-public class DesignPatternsDemo {
+public class DAOPattern {
     public static void main(String[] args) {
        
         // DAO
