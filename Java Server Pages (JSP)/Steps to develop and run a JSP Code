@@ -1,0 +1,15 @@
+Steps to develop and run a JSP Code
+
+In order to run this JSP code we have to follow these steps:
+
+  1. Create a directory under %CATALINA_HOME%/webapps called MyApps.
+
+  2. Write the JSP source code (with .jsp extension).
+
+  3. Place the JSP code into the MyApps directory.
+  
+  4. Create a deployment descriptor.
+  
+  5. Run Tomcat Server.
+  
+  6. Write “http://localhost:8085/MyApps/Counter.jsp” in the address bar of the Web Browser and press ENTER.
