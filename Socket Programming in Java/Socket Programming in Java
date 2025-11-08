@@ -1,0 +1,62 @@
+What is Socket Programming?
+
+Socket Programming is a way of connecting two nodes (programs) on a network to communicate with each other.
+
+One program acts as a Server, which listens for requests.
+
+Another acts as a Client, which sends requests and receives responses.
+
+It allows data exchange between systems over TCP/IP or UDP protocols.
+
+🔗 Key Concepts
+Term	Description
+Socket	Endpoint for communication between two machines.
+IP Address	Unique identifier for a device on the network.
+Port Number	Identifies a specific service or application on a device.
+ServerSocket (Java Class)	Used on the server side to listen for and accept incoming connections.
+Socket (Java Class)	Used on both sides for sending and receiving data once a connection is established.
+TCP	Connection-oriented protocol ensuring reliable data transfer.
+UDP	Connectionless protocol allowing fast, lightweight communication without reliability.
+
+🖥️ Types of Socket Communication
+
+TCP (Stream-based communication)
+
+  Reliable and ordered data transmission.
+
+  Classes used:
+
+  ServerSocket (Server)
+
+  Socket (Client)
+
+UDP (Datagram-based communication)
+
+  Connectionless and faster, but less reliable.
+
+  Classes used:
+
+  DatagramSocket
+
+  DatagramPacket
+
+
+How TCP Socket Communication Works
+Steps:
+
+Server side: 
+  Create a ServerSocket on a specific port.
+
+  Wait for client requests using accept().
+
+  Communicate via input/output streams.
+
+Client side:
+
+  Create a Socket specifying the server IP and port.
+
+  Send data using OutputStream.
+
+  Receive data using InputStream.
+
+Close the connection once communication is complete.
