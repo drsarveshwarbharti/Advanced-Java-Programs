@@ -60,3 +60,75 @@ Client side:
   Receive data using InputStream.
 
 Close the connection once communication is complete.
+
+
+Flow of Execution
+
+  Run Server.java first → It starts listening on port 5000.
+
+  Run Client.java → It connects to the server.
+
+  Exchange messages between client and server.
+
+  Both programs terminate gracefully.
+
+
+Advantages of Socket Programming
+
+✅ Real-time communication between processes.
+✅ Reliable data transfer using TCP.
+✅ Works over local networks or the internet.
+✅ Can be used for building chat applications, file transfer systems, etc.
+
+
+What is a Port?
+
+A port is a virtual communication endpoint that helps identify a specific process or service running on a machine.
+It works together with the IP address to uniquely identify where data should go.
+
+Think of it like:
+
+🏠 IP address = house number,
+🚪 Port number = door number leading to a specific room or service.
+
+⚙️ Port 5000 in Your Code
+ServerSocket serverSocket = new ServerSocket(5000);
+
+
+This means your server program is listening for client requests on port number 5000.
+
+When a client program connects, it must use the same port number, like this:
+
+Socket socket = new Socket("localhost", 5000);
+
+
+If the client uses a different port, the server won’t recognize the connection request.
+
+🌐 Port Number Range
+Range	Description
+0 – 1023	Well-known (reserved) ports — used by standard services like HTTP (80), HTTPS (443), FTP (21), etc.
+1024 – 49151	Registered ports — used by user applications and services.
+49152 – 65535	Dynamic/private ports — often used temporarily by the system.
+
+Since 5000 is above 1024, it’s a safe user-defined port, perfect for testing socket programs.
+
+📡 Example in Context
+
+Server Side: Opens door 5000 and waits.
+
+Client Side: Knocks on door 5000 to establish a connection.
+
+Once connected, both can send and receive messages.
+
+🧠 Tips:
+
+Always ensure the port is free (not used by another program).
+
+Avoid using reserved ports (0–1023).
+
+Both client and server must use the same port for the connection.
+
+✅ In short:
+
+Port 5000 is just a communication channel number where your server listens and your client connects.
+You can replace 5000 with any other free port, e.g., 8080, 9000, etc.
