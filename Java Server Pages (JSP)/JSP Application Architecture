@@ -9,6 +9,7 @@ It then compiles the source file into a class file;
 this is done the first time and that is why the JSP is probably slower the first time it is accessed. 
 Any time after this the special compiled Servlet is executed and is therefore returns faster.
 
+Follow the link for JSP Architecture image: https://www.techguruspeaks.com/jsp-application-architecture/
  
 Steps required for a JSP request:
 Step 1.  The user goes to a web site made using JSP. The user goes to a JSP page (ending with .jsp). The web browser makes the request via the Internet.
@@ -34,7 +35,7 @@ Step 9.  HTML results are displayed on the user’s web browser.
 JSP Life Cycle
 The pictorial view of the JSP life cycle phase is as below:
 
- 
+Follow the link for JSP Architecture image: https://www.techguruspeaks.com/jsp-application-architecture/ 
 
 There are 7 phases in JSP life cycle:
 1. Page Translation:- The JSP page is parsed and a Java file containing the corresponding Servlet is created.
