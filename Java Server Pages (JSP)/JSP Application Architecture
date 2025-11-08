@@ -1,0 +1,53 @@
+JSP Application Architecture
+
+JSPs are built on top of Oracle’s Servlet technology. 
+JSPs are essentially an HTML page with special JSP tags embedded. 
+These JSP tags can contain Java code. 
+The JSP file extension is .jsp rather than .htm or .html. 
+The JSP engine parses the .jsp and creates a Java Servlet source file. 
+It then compiles the source file into a class file; 
+this is done the first time and that is why the JSP is probably slower the first time it is accessed. 
+Any time after this the special compiled Servlet is executed and is therefore returns faster.
+
+ 
+Steps required for a JSP request:
+Step 1.  The user goes to a web site made using JSP. The user goes to a JSP page (ending with .jsp). The web browser makes the request via the Internet.
+
+Step 2.  The JSP request gets sent to the Web server.
+
+Step 3.  The Web server recognizes that the file required is special (.jsp), therefore passes the JSP file to the JSP Servlet Engine.
+
+Step 4.  If the JSP file has been called the first time, the JSP file is parsed, otherwise go to step 7.
+
+Step 5.  The next step is to generate a special Servlet from the JSP file. The entire HTML required is converted to println statements.
+
+Step 6.  The Servlet source code is compiled into a class file.
+
+Step 7.  The Servlet is instantiated, calling the init and service methods.
+
+Step 8.  HTML from the Servlet output is sent via the Internet.
+
+Step 9.  HTML results are displayed on the user’s web browser.
+
+ 
+
+JSP Life Cycle
+The pictorial view of the JSP life cycle phase is as below:
+
+ 
+
+There are 7 phases in JSP life cycle:
+1. Page Translation:- The JSP page is parsed and a Java file containing the corresponding Servlet is created.
+
+2. Page Compilation:- The Java file is compiled.
+
+3. Load class:- The compiled Servlet class is loaded.
+
+4. Create instance:- An instance of the Servlet is created. 0
+
+5. Call jspInit():- This method is called before any other method to allow initialization. It is called only once.
+
+6. Call _jspService():- This method is called for each request.
+
+7. Call jspDestroy():- This method is called when the Servlet container decides to take the Servlet out of service. It is called only once.
+
