@@ -1,0 +1,31 @@
+A simple JSP (JavaServer Pages) program combines HTML with Java code to dynamically generate web content. 
+To run it, you need a web server with a JSP/Servlet container, such as Apache Tomcat.
+
+<!DOCTYPE html>
+<html>
+<body>
+    Hello! The time is now <%= new java.util.Date() %>
+</body>
+</html>
+
+
+Explanation:
+
+  The <%= %> tags enclose a Java expression.
+
+  The new java.util.Date() expression retrieves the current date and time.
+
+  When the JSP page is loaded in the browser, the Java expression is evaluated at runtime and its output is embedded into the HTML.
+
+
+Running a Simple JSP Page (Steps to Run JSP)
+
+  1. Save JSP file using the .jsp extension (e.g., hello.jsp).
+
+  2. Start server (e.g., Apache Tomcat).
+
+  3. Place your application inside the appropriate folder (e.g., webapps for Tomcat).
+
+  4. Open the browser and enter the JSP page URL:
+
+    http://localhost:8080/JSPDemo/hello.jsp
