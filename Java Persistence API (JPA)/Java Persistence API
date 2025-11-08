@@ -1,0 +1,53 @@
+Java Persistence API (JPA)
+  Object-relational mapping (ORM) concepts.
+  JPA annotations for mapping Java objects to database tables. 
+  JPQL (Java Persistence Query Language) for database querying.
+
+Java Persistence API (JPA)
+
+1. Overview:
+  The Java Persistence API (JPA) is a specification in Java used for object-relational mapping (ORM) — a technique that maps Java objects to relational database tables. It simplifies database operations by allowing developers to interact with data using Java objects instead of writing complex SQL queries.
+
+2. Object-Relational Mapping (ORM) Concepts:
+  • Entity: A Java class that represents a table in the database. Each instance corresponds to a row in that table.
+  • Persistence Context: The environment in which entity instances are managed.
+  • Entity Manager: The main interface used to perform CRUD operations (Create, Read, Update, Delete) on entities.
+  • Relationships:
+      @OneToOne → One entity instance is associated with one other.
+      @OneToMany/@ManyToOne→One-to-manyormany-to-oneassociations. o 
+      @ManyToMany → Both sides can have multiple associations.
+
+3. JPA Annotations for Mapping:
+Some commonly used annotations include:
+• @Entity – Marks a class as a persistent entity.
+• @Table(name="table_name") – Specifies the database table name.
+• @Id – Marks the primary key field.
+• @GeneratedValue(strategy=GenerationType.IDENTITY) – Specifies auto-
+generation of primary key values.
+• @Column(name="column_name") – Maps a field to a specific column.
+• @Transient – Marks a field that should not be persisted.
+• @JoinColumn – Defines a foreign key column for relationships.
+
+Example:
+@Entity
+@Table(name = "students") public class Student {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY) private int id;
+   
+@Column(name = "student_name") private String name;
+@Column(name = "email")
+private String email; }
+
+4. JPQL (Java Persistence Query Language):
+  • JPQL is an object-oriented query language similar to SQL but operates on entity objects rather than database tables.
+  • It supports select, update, and delete operations on entities. Example Queries:
+
+// Select all students
+Query q1 = em.createQuery("SELECT s FROM Student s");
+
+// Select students with a specific name
+Query q2 = em.createQuery("SELECT s FROM Student s WHERE s.name = :name"); q2.setParameter("name", "Ravi");
+
+// Update example
+em.createQuery("UPDATE Student s SET s.email = 'new@mail.com' WHERE s.id = 1").executeUpdate();
+  
