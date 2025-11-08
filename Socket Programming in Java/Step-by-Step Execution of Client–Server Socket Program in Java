@@ -1,0 +1,109 @@
+⚙️ Step-by-Step Execution of Client–Server Socket Program in Java
+(How the server and client communicate step-by-step (connection → data exchange → close)?)
+
+🧩 You’ll Need
+
+  Java Development Kit (JDK) installed
+
+  A text editor (like Notepad++, VS Code, or IntelliJ IDEA)
+
+  Two terminal/command prompt windows (one for server, one for client)
+
+
+🖥️ Example Files
+
+  Server.java
+
+  Client.java
+
+
+🧠 Execution Steps
+🪜 Step 1 – Save the Files
+
+Save both files in the same folder, e.g.:
+
+C:\JavaSockets\
+   ├── Server.java
+   └── Client.java
+
+🪜 Step 2 – Open Two Terminals / Command Prompts
+
+  You’ll need two separate windows:
+
+  One for Server
+
+  One for Client
+
+🪜 Step 3 – Compile Both Programs
+
+In both terminals, navigate to the folder containing the files.
+
+cd C:\JavaSockets
+javac Server.java
+javac Client.java
+
+
+This creates Server.class and Client.class files (compiled bytecode).
+
+🪜 Step 4 – Run the Server First
+
+In the first terminal:
+
+java Server
+
+
+You should see:
+
+Server started. Waiting for client...
+
+
+This means your server is running and waiting for a client to connect.
+
+🪜 Step 5 – Run the Client
+
+In the second terminal:
+
+java Client
+
+
+You’ll see:
+
+Connected to server.
+Enter message for server:
+
+
+Type something like:
+
+Hello Server!
+
+🪜 Step 6 – Observe the Communication
+
+On the Server window, you’ll see:
+
+Client connected!
+Client says: Hello Server!
+
+
+On the Client window, you’ll see:
+
+Server replied: Hello Client, message received!
+
+
+🎉 Congratulations! You’ve successfully run a TCP client-server program!
+
+⚠️ Common Issues & Fixes
+Problem	Solution
+java.net.BindException: Address already in use	Port 5000 is already used. Try another port, e.g., 5050.
+java.net.ConnectException: Connection refused	Make sure the server is started before the client.
+java.io.IOException: Connection reset	Ensure both programs close sockets properly.
+Firewall blocks connection	Temporarily disable firewall or allow Java network access.
+
+🧩 Bonus: Run on Two Different Computers
+
+If both client and server are on different systems:
+
+Find the server’s IP address using ipconfig (Windows) or ifconfig (Linux/Mac).
+
+Replace "localhost" in client code with that IP:
+
+Socket socket = new Socket("192.168.1.10", 5000);
