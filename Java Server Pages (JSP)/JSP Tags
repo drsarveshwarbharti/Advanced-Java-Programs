@@ -1,0 +1,57 @@
+JSP Tags
+
+JSP scripting language include several tags or scripting elements that performs various tasks such as 
+declaring variables and methods, writing expressions, and calling other JSP pages. 
+These are known as JSP scripting elements. 
+The different types of scripting elements are summarized as:
+
+
+1. Directive Tag
+
+Specifies translation time instructions to the JSP engine.
+
+<%@ directives %>
+
+2. Declaration Tag
+
+Declaration Declares and defines methods and variables.
+
+<%! variable dceclaration & method definition %>
+
+3. Scriptlet Tag
+
+Allows the developer to write free-form Java code in a JSP page.
+
+<% some Java code %>
+
+4. Expression Tag
+
+Used as a shortcut to print values in the output HTML of a JSP page.
+
+<%= an Expression %>
+
+5. Action Tag
+
+Provides request-time instructions to the JSP engine.
+
+<jsp:actionName />
+ 
+6. Comment Tag
+
+Used for documentation and for commenting out parts of JSP code.
+
+<%– any Text –%>
+
+
+Example code showing different types of JSP Tags:
+
+<%-- Counter.jsp --%>             <%-- Comment Tag --%>
+
+<%@ page language="java" %>       <%-- Directive Tag --%>
+<%! int count = 0; %>             <%-- Declaration Tag --%>
+<% count++; %>                    <%-- Scriptlet Tag --%>
+Welcome! You are visitor number
+<%= count %>                      <%-- Expression Tag --%>
+
+
+For more details about JSP Tags, visit https://www.techguruspeaks.com/jsp-tags/
